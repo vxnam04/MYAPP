@@ -5,6 +5,8 @@
 nav{
     align-items: center;
     background-color: black;
+    width: 500px;
+    height: 60vh;
 }
 nav.title{
     font-size:  1.5rem;
@@ -13,12 +15,8 @@ nav.title{
     text-decoration: none;
     color: aliceblue;
 }
-/* nav ul {
-    display: flex;
-} */
 nav ul li {
     list-style: none;
-
 }
 nav ul li a {
     display: block;

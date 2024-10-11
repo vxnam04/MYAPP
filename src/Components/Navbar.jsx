@@ -4,7 +4,6 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return <nav>
-        <Link to="/" className='title'>Website</Link>
         <ul>
             <li><NavLink to="/Trang chủ">Trang chủ</NavLink></li>
             <li><NavLink to="/Tìm kiếm">Tìm kiếm</NavLink></li>

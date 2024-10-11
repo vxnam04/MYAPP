@@ -1,0 +1,37 @@
+.container{
+    height: 60;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.logo{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.logo img{
+    width: 200px;
+    height: 50px;
+ 
+}
+.profile{
+    margin-top: 8px;
+    margin-right: 60px;
+}
+.profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Làm ảnh hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh giữ nguyên tỉ lệ mà không bị méo */
+    cursor: pointer; /* Thay đổi con trỏ khi hover vào ảnh */
+    border: 2px solid #ccc; /* Viền xung quanh ảnh */
+    transition: transform 0.3s ease;
+  }
+  
+  .profile img:hover {
+    transform: scale(1.05); }
+  
