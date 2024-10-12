@@ -1,8 +1,8 @@
 
 import './App.css';
 import React from 'react';
-import Home from './Components/page/Home';
-import Baidang from './Components/page/Baidang';
+import Home from './Components/page/Home/Home';
+import Baidang from './Components/page/Baidang/Baidang';
 import Profile from './Components/Proflie/Profile';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Menu } from "antd";
@@ -15,8 +15,8 @@ function App() {
     <div>
       <Headers />
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <SideMenu />
-        <Content />
+        <div ><SideMenu /></div>
+        <div ><Content /></div>
       </div>
       <Footer />
     </div>

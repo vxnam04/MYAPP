@@ -1,0 +1,16 @@
+.container {
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; Main content takes 3 parts, sidebar 1 part */
+    /* grid-gap: 20px; */
+    padding: 20px;
+    display: flex;
+    background-color: white;
+  }
+.Maincontent{
+    width: 50%;
+    height: 100vh;
+}
+.Sidebar{
+    width: 50%;
+    height: 100vh;
+}

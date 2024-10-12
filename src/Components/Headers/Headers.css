@@ -1,8 +1,8 @@
 .container{
-    height: 60;
-    margin-top: 20px;
+    height: 70px;
+    margin-top: 10px;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: white;
     color: white;
     display: flex;
@@ -11,15 +11,13 @@
 }
 .logo{
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 70px;
 }
 .logo img{
     width: 200px;
     height: 50px;
- 
 }
 .profile{
-    margin-top: 8px;
     margin-right: 60px;
 }
 .profile img{
