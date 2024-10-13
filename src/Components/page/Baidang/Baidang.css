@@ -1,0 +1,80 @@
+
+.feed {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    right: -300px;
+  }
+  
+  /* Cấu trúc bài đăng */
+  .post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  /* Header của bài đăng (ảnh đại diện và thông tin người đăng) */
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .post-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .time {
+    color: #999;
+    font-size: 12px;
+  }
+  
+  /* Nội dung của bài đăng */
+  .post-content {
+    margin-top: 10px;
+  }
+  
+  .post-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .post-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Ảnh trong bài đăng */
+  .post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Caption của ảnh */
+  .post-caption {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+  
