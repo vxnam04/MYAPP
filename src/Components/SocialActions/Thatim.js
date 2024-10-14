@@ -25,7 +25,7 @@ const SocialActions = () => {
     return (
         <div className="social-actions">
             <div className="action" onClick={handleLike}>
-                <i className="fas fa-heart"></i> {/* Sử dụng Font Awesome hoặc biểu tượng SVG */}
+                <i className="fas fa-heart"></i>
                 <span>{likes} Likes</span>
             </div>
             <div className="action" onClick={handleComment}>

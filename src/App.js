@@ -10,6 +10,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Menu } from "antd";
 import Headers from './Components/Headers/Headers';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Taobaiviet from './Components/page/Taobaiviet/Taobaiviet';
 
 // import { Footer, Header } from 'antd/es/layout/layout';
 
@@ -43,7 +44,7 @@ function SideMenu() {
           { label: "Bài đăng", key: "/Bài đăng" },
           { label: "Thông báo", key: "/Thông báo" },
           { label: "Tạo bài viết", key: "/Tạo bài viết" },
-          { label: "Thể loại", key: "/Thể loại" },
+          // { label: "Thể loại", key: "/Thể loại" },
         ]}></Menu>
     </div>
   )
@@ -55,8 +56,8 @@ function Content() {
       <Route path="/Tìm kiếm" element={<Timkiem />} />
       <Route path="/Bài đăng" element={<Baidang />} />
       <Route path="/Thông báo" element={<Thongbao />} />
-      <Route path="/Tạo bài viết" element={<Baidang />} />
-      <Route path="/Thể loại" element={<Baidang />} />
+      <Route path="/Tạo bài viết" element={<Taobaiviet />} />
+      {/* <Route path="/Thể loại" element={<Baidang />} /> */}
       <Route path="/Profile" element={<Profile />} />
     </Routes>
   </div>

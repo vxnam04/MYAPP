@@ -3,7 +3,7 @@ import React from 'react'
 const Thongbao = () => {
     return (
         <div>
-            dcmm
+            helo
         </div>
     )
 }

@@ -1,0 +1,60 @@
+
+  .category-list {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .category-list h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .categories ul {
+    list-style: none;
+  }
+  
+  .categories li {
+    margin-bottom: 10px;
+    font-family:cursive;
+  }
+  /* Theloai.css khi an vo de len va lam mo*/
+/* Theloai.css */
+.category-list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px ;
+    padding-left: 35px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    max-width: 90%; /* Đảm bảo không vượt quá chiều rộng màn hình trên các thiết bị nhỏ */
+}
+
+/* Lớp phủ (overlay) để làm mờ nền */
+.ul1{
+    margin-right: 30px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    z-index: 5;
+    display: none; /* Ban đầu ẩn đi */
+}
+
+.overlay.show {
+    display: block; /* Hiển thị khi cần */
+}
