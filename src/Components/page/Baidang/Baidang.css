@@ -8,7 +8,7 @@
     align-items: center;
     position: relative;
     top: 0px;
-    right: -250px;
+    right: -210px;
   }
   
   /* Cấu trúc bài đăng */
@@ -82,7 +82,7 @@
   }
   .Theloai{
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 50px;
     border:  1px solid rgba(111, 88, 88,0.5);
     padding: 5px 10px;
     border-top:none;

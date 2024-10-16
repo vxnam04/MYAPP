@@ -69,7 +69,7 @@
     align-items: center;
 }
 
-.submit-button2 {
+.submit-button3 {
     background-color: #fff;
     color: rgb(60, 172, 236);
     border: none;
@@ -96,7 +96,7 @@
 }
 
 .headertaobaiviet1 p {
-    margin-left: 80px;
+    margin-left: 65px;
 }
 
 .containt-taobaiviet {
@@ -130,7 +130,7 @@
     padding: 30px;
 }
 
-.anhtaobaiviet {
+.anhtaobaiviet1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -141,8 +141,8 @@
     display: none; /* Ẩn thẻ input mặc định */
 }
 
-.upload-label {
-    display: inline-block; /* Cho phép thẻ label hiển thị như nút */
+.upload-label1 {
+    display: inline-block; 
     background-color: #007bff; /* Màu nền */
     color: white; /* Màu chữ */
     padding: 10px 20px; /* Khoảng cách bên trong */

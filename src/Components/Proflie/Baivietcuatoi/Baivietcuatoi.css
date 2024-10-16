@@ -1,4 +1,4 @@
-.post {
+.post11 {
     border: 1px solid #dbdbdb;
     padding: 15px;
     margin: 20px ;
@@ -6,6 +6,7 @@
     width: 1000px;
     height: 100%;
     align-items: center;
+    border-radius: 10px;
   }
   .anhcontainerbaivietcuatoi{
     width: 200px;
@@ -19,8 +20,20 @@
     border: 1px solid #dbdbdb;
     padding: 15px;
     margin: 10px 0;
+    width: 500px;
+    margin-left: 250px;
+    border-radius: 10px;
+    
   } 
-  
+  .post-header-left{
+    display: flex;
+    justify-content: space-between;
+  }
+  .post-header-right a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
   .post-header {
     display: flex;
     align-items: center;
@@ -46,4 +59,10 @@
     margin-right: 15px;
     cursor: pointer;
   }
-  
+  .chubaiviet{
+    position: absolute;
+    left: 520px;
+    top:360px;
+    font-weight: 5px;
+    font-size: 1.2rem;
+  }

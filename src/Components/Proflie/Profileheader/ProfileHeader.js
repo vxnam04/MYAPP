@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProfileHeader.css';
+import './Profileheader.css';
 import { Link } from "react-router-dom";
 import anhavt from "../../../Assets/profile.jpg";
 

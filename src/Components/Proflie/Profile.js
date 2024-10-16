@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from './Baivietcuatoi/Baivietcuatoi';
-import Profileheader from '../Proflie/Profileheader/ProfileHeader';
+import Profileheader from './Profileheader/Profileheader.js';
 function Profile() {
     return (
         <div className="App">
@@ -11,5 +11,4 @@ function Profile() {
         </div>
     );
 }
-
 export default Profile;
