@@ -1,0 +1,183 @@
+.container2 {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0px 20px;
+    padding-top: 10px;
+    position: fixed;
+    top: 50%; /* Đặt top 50% */
+    left: 62%; /* Đặt left 50% */
+    transform: translate(-50%, -50%); /* Đẩy nó lên và sang trái 50% chiều cao và chiều rộng */
+    background-color: #fff;
+    z-index: 20; /* Đặt z-index cao hơn lớp phủ */
+    position: relative;
+}
+
+.thanhchan {
+    position: relative;
+}
+
+.thanhchan::after {
+    content: '';
+    position: absolute; /* Đảm bảo đường nằm đúng vị trí */
+    background-color: #c2c2c2; /* Màu sắc của đường */
+    height: 1px; /* Độ dày của đường */
+    width: 100%; /* Chiều rộng đầy đủ */
+    top: 0px;
+}
+/* .thanhchan1 {
+  
+} */
+
+.thanhchan1::after {
+    content: '';
+    position: absolute; /* Đảm bảo đường nằm đúng vị trí */
+    background-color: #c2c2c2; /* Màu sắc của đường */
+    height: 1px; /* Độ dày của đường */
+    width: 230px; /* Chiều rộng đầy đủ */
+    top: 200px;
+    left: 550px;
+}
+
+.image-upload2 {
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.image-placeholder2 {
+    width: 100px;
+    height: 100px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-input2 {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-button2 {
+    background-color: #fff;
+    color: rgb(60, 172, 236);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nutdong3 {
+    font-size: 1.1rem;
+    border: none;
+    color: rgb(103, 103, 103);
+    align-items: end;
+    background-color: #fff;
+}
+
+.headertaobaiviet1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.headertaobaiviet1 p {
+    margin-left: 80px;
+}
+
+.containt-taobaiviet {
+    display: flex;
+}
+.content-input3{
+    height: 100px;
+    width: 220px;
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+}
+.content-input2 {
+    width: 70%;
+    height: 420px;
+    border: none;
+    border-right: 1px solid rgb(194, 194, 194);
+    outline: none;
+}
+
+.container2 input {
+    width: 100%;
+}
+
+.image-upload2 {
+    width: 30%;
+    height: 100%;
+}
+
+.content-input2 {
+    padding: 30px;
+}
+
+.anhtaobaiviet {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.nhapanhtaobaiviet {
+    display: none; /* Ẩn thẻ input mặc định */
+}
+
+.upload-label {
+    display: inline-block; /* Cho phép thẻ label hiển thị như nút */
+    background-color: #007bff; /* Màu nền */
+    color: white; /* Màu chữ */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    border-radius: 4px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    font-size: 16px; /* Kích thước chữ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi */
+    margin-top: 10px; /* Khoảng cách trên */
+    margin-left: 40px;
+}
+
+.upload-label:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột */
+}
+
+.upload-label:active {
+    background-color: #004494; /* Màu nền khi nhấn */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 298px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    z-index: 5;
+    display: none; /* Ban đầu ẩn đi */
+}
+
+.Overlay.show {
+    display: block; /* Hiển thị khi cần */
+}
+
+.modal {
+    z-index: 10; /* Đảm bảo modal hiển thị trên overlay */
+}
+

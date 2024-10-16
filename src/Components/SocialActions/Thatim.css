@@ -1,25 +1,28 @@
 .social-actions {
-    display: flex;
-    padding: 10px;
-    border-top: 1px solid #ccc;
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
 
-  }
-  
-  .action {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    color: #555;
-    margin-right: 20px;
-    margin-top: 10px;
-  }
-  
-  .action i {
-    margin-right: 5px;
-  }
-  
-  .action:hover {
-    color: #000;
-  }
-  
+.action {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.action i {
+  margin-right: 5px;
+  transition: color 0.3s; /* Thêm hiệu ứng chuyển đổi màu */
+}
+
+.action:hover {
+  color: #000;
+}
+
+.chung1.active {
+  color: red; /* Màu sắc khi biểu tượng được nhấp */
+}

@@ -1,14 +1,14 @@
 import React from 'react';
-import './Taobaiviet.css'; // Đảm bảo đường dẫn đến file CSS là chính xác
-import anhtaobaiviet from "../../../Assets/profile.jpg"; // Đảm bảo đường dẫn đến hình ảnh là chính xác
+import './Chinhsua.css'; // Đảm bảo đường dẫn đến file CSS là chính xác
+import anhtaobaiviet from "../../Assets/profile.jpg"; // Đảm bảo đường dẫn đến hình ảnh là chính xác
 
-const Taobaiviet = ({ closeModal }) => {
+const Chinhsua = ({ closeModal }) => {
     return (
         <>
             <div className="container2">
-                <div className='headertaobaiviet'>
-                    <button onClick={closeModal} className='nutdong2'>x</button> {/* Nút để đóng modal */}
-                    <p className='taobaivietmoi'>Tạo bài viết mới</p>
+                <div className='headertaobaiviet1'>
+                    <button onClick={closeModal} className='nutdong3'>Hủy</button> {/* Nút để đóng modal */}
+                    <p className='taobaivietmoi1'>Chỉnh sửa bài viết mới</p>
                     <button className="submit-button2">Chia sẻ</button>
                 </div>
                 <div className='thanhchan'></div>
@@ -45,4 +45,4 @@ const Taobaiviet = ({ closeModal }) => {
     );
 };
 
-export default Taobaiviet;
+export default Chinhsua;

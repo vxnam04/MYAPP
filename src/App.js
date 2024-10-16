@@ -5,6 +5,7 @@ import Baidang from './Components/page/Baidang/Baidang';
 import Profile from './Components/Proflie/Profile';
 import Timkiem from './Components/page/Timkiem/Timkiem';
 import Thongbao from './Components/page/Thongbao/Thongbao';
+import Chinhsua from './Components/Chinhsuatrangcanhan/Chinhsua';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Menu } from "antd";
 import Headers from './Components/Headers/Headers';
@@ -75,6 +76,7 @@ function Content() {
         {/* Removed the duplicate Thongbao route */}
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Tạo bài viết" element={<Taobaiviet />} />
+        <Route path="/Chỉnh sửa trang cá nhân" element={<Chinhsua />} />
       </Routes>
     </div>
   );
