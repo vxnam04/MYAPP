@@ -1,0 +1,115 @@
+
+
+.notifications-container {
+    width: 100%;
+    max-width: 600px;
+    padding-top: 60px;
+    height: 100vh;
+    margin: 0px 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Thêm cuộn dọc nếu nội dung quá dài */
+    animation: slide-in 0.5s ease-out;
+    position: fixed;
+    /* top: 100px; */
+    top:0px;
+    left: 288px;
+    z-index: 10; /* Đảm bảo nó nằm trên lớp phủ */
+}
+
+/* Các quy tắc CSS khác không thay đổi */
+
+
+.notification-section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content p {
+    margin: 0;
+    color: #555;
+    width: 100%;
+}
+
+.notification-content strong {
+    color: #333;
+}
+
+.notification-content span {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Sliding effect from left to right */
+@keyframes slide-in {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.hearedthongbao{
+    background-image: linear-gradient(180deg,rgb(207, 205, 205),#f4f4f409);
+    height: 50px;
+    width: 585px;
+    position: absolute;
+    top: 0px;
+}
+.nutdong1{
+    font-size: 1.4rem;
+    border: none;
+    color: red;
+    align-items: end;
+    position: absolute;
+    background-color:#e8e8e80a;
+    right: 20px;
+    top:20px;
+}
+/* Thongbao.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 298px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    z-index: 5;
+    display: none; /* Ban đầu ẩn đi */
+}
+
+.Overlay.show {
+    display: block; /* Hiển thị khi cần */
+}
+
+.modal {
+    z-index: 10; /* Đảm bảo modal hiển thị trên overlay */
+}
+

@@ -1,6 +1,5 @@
-
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Home from './Components/page/Home/Home';
 import Baidang from './Components/page/Baidang/Baidang';
 import Profile from './Components/Proflie/Profile';
@@ -12,31 +11,46 @@ import Headers from './Components/Headers/Headers';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Taobaiviet from './Components/page/Taobaiviet/Taobaiviet';
 
-// import { Footer, Header } from 'antd/es/layout/layout';
-
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+
+  const openModal = () => {
+    setIsModalOpen(true); // Open modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Close modal
+  };
 
   return (
     <div>
       <Headers />
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <div ><SideMenu /></div>
-        <div ><Content /></div>
+        <SideMenu openModal={openModal} />
+        <Content />
       </div>
       <Footer />
+      <Thongbao isOpen={isModalOpen} closeModal={closeModal} />
     </div>
   );
 }
+
 function Footer() {
-  return <div>header</div>
+  return <div>Footer</div>;
 }
-function SideMenu() {
-  const navigator = useNavigate()
+
+function SideMenu({ openModal }) { // Accept openModal as a prop
+  const navigate = useNavigate();
+
   return (
     <div className="Sidemenu">
       <Menu className="lable"
         onClick={({ key }) => {
-          navigator(key)
+          if (key === '/Thông báo') {
+            openModal(); // Open modal on notification click
+          } else {
+            navigate(key); // Navigate to other pages
+          }
         }}
         items={[
           { label: "Trang chủ", key: "/Trang chủ" },
@@ -45,23 +59,25 @@ function SideMenu() {
           { label: "Thông báo", key: "/Thông báo" },
           { label: "Tạo bài viết", key: "/Tạo bài viết" },
           // { label: "Thể loại", key: "/Thể loại" },
-        ]}></Menu>
+        ]}
+      />
     </div>
-  )
-}
-function Content() {
-  return <div>
-    <Routes>
-      <Route path="/Trang chủ" element={<Home />} />
-      <Route path="/Tìm kiếm" element={<Timkiem />} />
-      <Route path="/Bài đăng" element={<Baidang />} />
-      <Route path="/Thông báo" element={<Thongbao />} />
-      <Route path="/Tạo bài viết" element={<Taobaiviet />} />
-      {/* <Route path="/Thể loại" element={<Baidang />} /> */}
-      <Route path="/Profile" element={<Profile />} />
-    </Routes>
-  </div>
+  );
 }
 
+function Content() {
+  return (
+    <div>
+      <Routes>
+        <Route path="/Trang chủ" element={<Home />} />
+        <Route path="/Tìm kiếm" element={<Timkiem />} />
+        <Route path="/Bài đăng" element={<Baidang />} />
+        {/* Removed the duplicate Thongbao route */}
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Tạo bài viết" element={<Taobaiviet />} />
+      </Routes>
+    </div>
+  );
+}
 
 export default App;

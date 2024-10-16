@@ -21,8 +21,8 @@
     margin-right: 60px;
 }
 .profile img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%; /* Làm ảnh hình tròn */
     object-fit: cover; /* Đảm bảo ảnh giữ nguyên tỉ lệ mà không bị méo */
     cursor: pointer; /* Thay đổi con trỏ khi hover vào ảnh */
