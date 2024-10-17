@@ -12,6 +12,7 @@ import { Menu } from "antd";
 import Headers from './Components/Headers/Headers';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Taobaiviet from './Components/page/Taobaiviet/Taobaiviet';
+import AvatarMenu from './Components/Headers/avt/avt';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
@@ -23,16 +24,17 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false); // Close modal
   };
-
   return (
-    <div>
+    <div >
+
       <Headers />
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <SideMenu openModal={openModal} />
+        <SideMenu openModal={openModal} isModalOpen={isModalOpen} closeModal={closeModal} />
         <Content />
       </div>
       <Footer />
       <Thongbao isOpen={isModalOpen} closeModal={closeModal} />
+
     </div>
   );
 }
@@ -41,19 +43,24 @@ function Footer() {
   return <div>Footer</div>;
 }
 
-function SideMenu({ openModal }) { // Accept openModal as a prop
+function SideMenu({ openModal, isModalOpen, closeModal }) { // Accept isModalOpen and closeModal as props
   const navigate = useNavigate();
 
+  const handleClick = ({ key }) => {
+    if (key === '/Thông báo') {
+      if (isModalOpen) {
+        closeModal(); // Close modal if it's open
+      } else {
+        openModal(); // Open modal if it's closed
+      }
+    } else {
+      navigate(key); // Navigate to other pages
+    }
+  };
   return (
     <div className="Sidemenu">
       <Menu className="lable"
-        onClick={({ key }) => {
-          if (key === '/Thông báo') {
-            openModal(); // Open modal on notification click
-          } else {
-            navigate(key); // Navigate to other pages
-          }
-        }}
+        onClick={handleClick}
         items={[
           { label: "Trang chủ", key: "/Trang chủ" },
           { label: "Tìm kiếm", key: "/Tìm kiếm" },
@@ -79,6 +86,7 @@ function Content() {
         <Route path="/Tạo bài viết" element={<Taobaiviet />} />
         <Route path="/Chỉnh sửa bài viết" element={<Chinhsua />} />
         <Route path="/Chỉnh sửa trang cá nhân" element={<Chinhsuatcn />} />
+        <Route path="/avt" element={<AvatarMenu />} />
       </Routes>
     </div>
   );

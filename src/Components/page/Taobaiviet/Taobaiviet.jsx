@@ -1,15 +1,24 @@
 import React from 'react';
 import './Taobaiviet.css'; // Đảm bảo đường dẫn đến file CSS là chính xác
 import anhtaobaiviet from "../../../Assets/profile.jpg"; // Đảm bảo đường dẫn đến hình ảnh là chính xác
-
+import { useNavigate } from 'react-router-dom';
 const Taobaiviet = ({ closeModal }) => {
+    const navigate = useNavigate(); // Tạo đối tượng điều hướng
+
+    const handleSubmit = () => {
+        // Thực hiện xử lý lưu dữ liệu ở đây 
+
+        // Sau đó điều hướng về trang Profile
+        navigate(-1);
+    };
+
     return (
         <>
             <div className="container2">
                 <div className='headertaobaiviet'>
-                    <button onClick={closeModal} className='nutdong2'>x</button> {/* Nút để đóng modal */}
+                    <button onClick={handleSubmit} className='nutdong2'>x</button> {/* Nút để đóng modal */}
                     <p className='taobaivietmoi'>Tạo bài viết mới</p>
-                    <button className="submit-button2">Chia sẻ</button>
+                    <button onClick={handleSubmit} className="submit-button2">Chia sẻ</button>
                 </div>
                 <div className='thanhchan'></div>
                 <div className='containt-taobaiviet'>
@@ -40,7 +49,7 @@ const Taobaiviet = ({ closeModal }) => {
                 </div>
             </div>
             {/* Lớp phủ */}
-            <div className="overlay show" onClick={closeModal}></div>
+            <div className="overlay show" onClick={handleSubmit}></div>
         </>
     );
 };

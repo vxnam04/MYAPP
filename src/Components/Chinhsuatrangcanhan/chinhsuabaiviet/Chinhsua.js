@@ -16,7 +16,7 @@ const Chinhsua = ({ closeModal }) => {
         <>
             <div className="container2">
                 <div className='headertaobaiviet1'>
-                    <button onClick={closeModal} className='nutdong3'>Hủy</button> {/* Nút để đóng modal */}
+                    <button onClick={handleSubmit} className='nutdong3'>Hủy</button> {/* Nút để đóng modal */}
                     <p className='taobaivietmoi1'>Chỉnh sửa bài viết mới</p>
                     <button onClick={handleSubmit} className="submit-button3">Xong</button>
                 </div>
@@ -49,7 +49,7 @@ const Chinhsua = ({ closeModal }) => {
                 </div>
             </div>
             {/* Lớp phủ */}
-            <div className="overlay show" onClick={closeModal}></div>
+            <div className="overlay show" onClick={handleSubmit}></div>
         </>
     );
 };

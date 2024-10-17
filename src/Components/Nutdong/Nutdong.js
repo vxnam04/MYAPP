@@ -4,21 +4,17 @@ import Taobaiviet from '../page/Taobaiviet/Taobaiviet'; // Đảm bảo đườn
 const Nutdong = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // Trạng thái để quản lý việc mở/đóng modal
 
-    const openModal = () => {
-        setIsModalOpen(true); // Mở modal
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false); // Đóng modal
+    const toggleModal = () => {
+        setIsModalOpen(prev => !prev); // Đảo ngược trạng thái modal
     };
 
     return (
         <div>
-            <button onClick={openModal}>Tạo bài viết mới</button> {/* Nút để mở modal */}
+            <button onClick={toggleModal}>Tạo bài viết mới</button> {/* Nút để mở/đóng modal */}
             {isModalOpen && (
                 <>
-                    <Taobaiviet closeModal={closeModal} /> {/* Truyền hàm closeModal cho Taobaiviet */}
-                    <div className={`overlay ${isModalOpen ? 'show' : ''}`} onClick={closeModal}></div> {/* Lớp phủ */}
+                    <Taobaiviet closeModal={toggleModal} /> {/* Truyền hàm closeModal cho Taobaiviet */}
+                    <div className={`overlay ${isModalOpen ? 'show' : ''}`} onClick={toggleModal}></div> {/* Lớp phủ */}
                 </>
             )}
         </div>
