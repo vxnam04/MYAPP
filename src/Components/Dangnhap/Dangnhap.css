@@ -1,0 +1,170 @@
+.container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.Login {
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 30;
+    color: #333; 
+}
+
+.formleftlogin {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    padding: 40px 60px;
+    border-radius: 10px; 
+}
+
+.formrightlogin {
+    flex: 1; 
+    background-image: linear-gradient(50deg, #ff0a0a, #ff3333); /* Màu gradient nóng hơn */
+    display: block; 
+    color: white;
+    border-radius: 10px;
+}
+
+.inputusername, input[type="password"] {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%; 
+}
+
+.inputusername:focus, input[type="password"]:focus {
+    border-color: #ff0a0a; /* Màu khi focus */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7); /* Hiệu ứng đậm hơn khi focus */
+}
+
+.nutlogin, .nutlogin2 {
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px; /* Gộp lại */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    width: 100%; 
+}
+
+.nutlogin {
+    width: 300px;
+    background-color: #ff0a0a; /* Màu nền nút chính */
+}
+
+.nutlogin2 {
+    width: 250px; 
+    margin-left: 60px;
+    background-color: transparent; /* Sửa lại cho đúng */
+    border: 2px solid #ccc;
+}
+
+.nutlogin:hover, .nutlogin2:hover {
+    background-color: #ff3333; /* Màu nền khi hover */
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nutlogin:active, .nutlogin2:active {
+    transform: translateY(0); 
+}
+
+.overlaylogin {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+    pointer-events: auto;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease; 
+}
+
+.overlaylogin.show {
+    display: block;
+    opacity: 1;
+}
+
+.nutdong6 {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent; 
+    color: #b33a3a;
+    cursor: pointer; 
+    z-index: 100;
+}
+
+.nutdong6:hover {
+    color: #555; 
+}
+
+.formlogin1 {
+    z-index: 200;
+}
+
+.xinchaologin {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    margin: 130px 0 10px 70px; 
+    color: white; 
+}
+
+.taoblogchoriengminh {
+    font-size: 0.9rem; 
+    margin-bottom: 45px; 
+    margin-left: 70px;
+    color: white; 
+}
+
+.formlogin {
+    display: flex; 
+    justify-content: center; 
+    width: 800px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn */
+    background-color: rgba(255, 255, 255, 0.95);
+    animation: slide-up 1.5s ease;
+    transition: box-shadow 1.5s ease; /* Thêm hiệu ứng mượt khi hover */
+}
+
+.formlogin:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Đổ bóng mạnh hơn khi hover */
+}
+
+.overlaylogin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: slide-up 1.5s ease; /* Thời gian và hiệu ứng chuyển động */
+}
+
+@keyframes slide-up {
+    from {
+        transform: translate(10%, 10%); /* Bắt đầu từ góc dưới bên phải */
+    }
+    to {
+        transform: translate(0, 0); /* Kết thúc ở vị trí toàn màn hình */
+    }
+}

@@ -4,6 +4,8 @@ import Home from './Components/page/Home/Home';
 import Baidang from './Components/page/Baidang/Baidang';
 import Profile from './Components/Proflie/Profile';
 import Timkiem from './Components/page/Timkiem/Timkiem';
+import Dangnhap from './Components/Dangnhap/Dangnhap';
+import Dangki from './Components/Dangki/Dangki';
 import Thongbao from './Components/page/Thongbao/Thongbao';
 import Chinhsuatcn from './Components/Chinhsuatrangcanhan/Chinhsuatcn/Chinhsuatcn';
 import Chinhsua from './Components/Chinhsuatrangcanhan/chinhsuabaiviet/Chinhsua';
@@ -25,17 +27,18 @@ function App() {
     setIsModalOpen(false); // Close modal
   };
   return (
-    <div >
-
-      <Headers />
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <SideMenu openModal={openModal} isModalOpen={isModalOpen} closeModal={closeModal} />
-        <Content />
+    <>
+      <div><Loginlogup /></div>
+      <div >
+        <Headers />
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <SideMenu openModal={openModal} isModalOpen={isModalOpen} closeModal={closeModal} />
+          <Content />
+        </div>
+        <Footer />
+        <Thongbao isOpen={isModalOpen} closeModal={closeModal} />
       </div>
-      <Footer />
-      <Thongbao isOpen={isModalOpen} closeModal={closeModal} />
-
-    </div>
+    </>
   );
 }
 
@@ -87,9 +90,20 @@ function Content() {
         <Route path="/Chỉnh sửa bài viết" element={<Chinhsua />} />
         <Route path="/Chỉnh sửa trang cá nhân" element={<Chinhsuatcn />} />
         <Route path="/avt" element={<AvatarMenu />} />
+        {/* <Route path="/Đăng nhập" element={<Dangnhap />} />
+        <Route path="/Đăng ký" element={<Dangki />} /> */}
       </Routes>
     </div>
   );
 }
-
+function Loginlogup() {
+  return (
+    <div>
+      <Routes>
+        <Route path="/Đăng nhập" element={<Dangnhap />} />
+        <Route path="/Đăng ký" element={<Dangki />} />
+      </Routes>
+    </div>
+  );
+}
 export default App;

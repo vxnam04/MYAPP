@@ -2,8 +2,9 @@ import './avt.css';
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import Home from '../../page/Home/Home';
-import anhbackgroundavt from "../../../Assets/profile.jpg";
-
+// import anhbackgroundavt from "../../../Assets/profile.jpg";
+import anhavt1 from "../../../Assets/banlamviec.avif";
+// import SimpleMovingBarChart from "../../../Components/Proflie/Bieudo/Bieudo"
 const AvatarMenu = () => {
     const [isModalOpen, setIsModalOpen] = useState(true);
     const navigate = useNavigate();
@@ -34,15 +35,19 @@ const AvatarMenu = () => {
     return (
         <>
             {/* Hiện overlay chỉ khi modal đang mở */}
-            {isModalOpen && <div className="overlayavt show" onClick={handleOverlayClick}>
-                <img src={anhbackgroundavt} alt="haha" />
-            </div>}
+            {isModalOpen &&
+                <>
+                    <div className='anhavt1'><img src={anhavt1} alt="hahaha" /></div>
+                    <div className="overlayavt show" onClick={handleOverlayClick}></div>
+
+                    {/* <div className='bieudone'><SimpleMovingBarChart /></div> */}
+                </>}
             {isModalOpen && (
                 <div className='boxavt'>
-                    <button onClick={handleSubmit1} className='nutdong2'>x</button>
+                    <button onClick={handleSubmit1} className='nutdong4'>x</button>
                     <p className='xemtrangcanhan chungavt' onClick={() => handleMenuClick('/Profile')}>Xem trang cá nhân</p>
-                    <p className='dangnhapavt chungavt' onClick={() => handleMenuClick('/dang-nhap')}>Đăng nhập</p>
-                    <p className='dangkiavt chungavt' onClick={() => handleMenuClick('/dang-ky')}>Đăng ký</p>
+                    <p className='dangnhapavt chungavt' onClick={() => handleMenuClick('/Đăng nhập')}>Đăng nhập</p>
+                    <p className='dangkiavt chungavt' onClick={() => handleMenuClick('/Đăng ký')}>Đăng ký</p>
                 </div>
             )}
         </>

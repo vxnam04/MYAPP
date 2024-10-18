@@ -1,64 +1,87 @@
-/* avt.css */
-
-.overlayavt{
+/* Overlay */
+.overlayavt {
     position: fixed;
     top: 110px;
     left: 298px;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); Màu nền mờ */
-    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5; /* Overlay sẽ ở phía trên */
     display: none;
 }
-.overlayavt img{
+.overlayavt img {
     left: 298px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-.anhnaydep{
-    width: 100%;
-    height: 100vh;
     object-fit: cover;
 }
 .overlayavt.show {
     display: block; /* Hiển thị overlay khi có lớp "show" */
 }
 
-
 /* Box modal */
 .boxavt {
-    position: fixed; /* Định vị cố định */
-    top: 50%; /* Giữa màn hình theo chiều dọc */
-    left: 60%; /* Giữa màn hình theo chiều ngang */
-    transform: translate(-50%, -50%); /* Di chuyển về giữa */
-    background: white; /* Màu nền trắng */
-    padding: 20px; /* Khoảng cách bên trong */
-    border-radius: 8px; /* Bo góc */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    position: fixed;
+    width: 300px;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1001; /* Đảm bảo box nằm trên overlay */
 }
 
-/* Các mục trong modal */
 .chungavt {
-    margin: 10px 0; /* Khoảng cách giữa các mục */
+    margin: 10px 0;
     margin-bottom: 20px;
     font-size: 1.2rem;
-    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
-    text-align: center; /* Canh giữa chữ */
-}
-.chungavt::after{
-    content: '';
-    position: absolute; /* Đảm bảo đường nằm đúng vị trí */
-    background-color: #c2c2c2; /* Màu sắc của đường */
-    height: 1px; /* Độ dày của đường */
-    width: 100%; /* Chiều rộng đầy đủ */
-    top: 70px;
-    left: 0px;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid #c2c2c2; /* Gạch ngang ngăn cách giữa các mục */
 }
 
+.chungavt:last-child {
+    border-bottom: none;
+     /* Bỏ gạch ngang cho mục cuối cùng */
+    margin-bottom: 0;
+    margin-top: 20px;
+}
 /* Hiệu ứng hover cho các mục */
 .chungavt:hover {
-    color: #007BFF; /* Thay đổi màu chữ khi hover */
-    text-decoration: underline; /* Gạch chân khi hover */
+    color: #007BFF;
+}
+
+/* Ảnh nằm sau lớp phủ mờ */
+.anhavt1 {
+    width: 100%;
+    height: 600px;
+    object-fit: fill;
+    position: fixed; /* Vị trí tương đối */
+    z-index: 1; /* Z-index thấp hơn overlay */
+}
+
+/* .bieudone {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+} */
+.nutdong4{
+    border: none;
+    background-color: white;
+    position: absolute;
+    top:8px;
+    left: 15px;
+    font-size: 1.3rem;
+}
+.xemtrangcanhan {
+    margin-top: 30px;
+}
+.nutdong4:hover{
+    color: #e74c4c;
 }
