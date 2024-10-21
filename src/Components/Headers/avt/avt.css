@@ -23,8 +23,8 @@
 .boxavt {
     position: fixed;
     width: 300px;
-    top: 50%;
-    left: 60%;
+    top: 200px;
+    right: 0;
     transform: translate(-50%, -50%);
     background: white;
     padding: 20px;
@@ -58,9 +58,9 @@
 
 /* Ảnh nằm sau lớp phủ mờ */
 .anhavt1 {
-    width: 100%;
-    height: 600px;
-    object-fit: fill;
+    width: 100vw; /* Chiều rộng 100% của viewport */
+    height: 100vh; /* Chiều cao 100% của viewport */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
     position: fixed; /* Vị trí tương đối */
     z-index: 1; /* Z-index thấp hơn overlay */
 }
@@ -84,4 +84,23 @@
 }
 .nutdong4:hover{
     color: #e74c4c;
+}
+.overlaylogin7 {
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+
+    z-index: 5;
+    display: none;
+    pointer-events: auto;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease; 
+}
+
+.overlaylogin7.show7 {
+    display: block;
+    opacity: 1;
 }

@@ -18,6 +18,7 @@ import AvatarMenu from './Components/Headers/avt/avt';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+  const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false); // Avatar menu state
 
   const openModal = () => {
     setIsModalOpen(true); // Open modal
@@ -26,14 +27,24 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false); // Close modal
   };
+
+  const toggleAvatarMenu = () => {
+    setIsAvatarMenuOpen(!isAvatarMenuOpen); // Toggle avatar menu
+  };
+
   return (
     <>
       <div><Loginlogup /></div>
-      <div >
-        <Headers />
+      <div>
+        <Headers toggleAvatarMenu={toggleAvatarMenu} />
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <SideMenu openModal={openModal} isModalOpen={isModalOpen} closeModal={closeModal} />
+          <SideMenu
+            openModal={openModal}
+            isModalOpen={isModalOpen}
+            closeModal={closeModal}
+          />
           <Content />
+          {isAvatarMenuOpen && <AvatarMenu />} {/* Render AvatarMenu conditionally */}
         </div>
         <Footer />
         <Thongbao isOpen={isModalOpen} closeModal={closeModal} />
@@ -46,7 +57,7 @@ function Footer() {
   return <div>Footer</div>;
 }
 
-function SideMenu({ openModal, isModalOpen, closeModal }) { // Accept isModalOpen and closeModal as props
+function SideMenu({ openModal, isModalOpen, closeModal }) {
   const navigate = useNavigate();
 
   const handleClick = ({ key }) => {
@@ -60,6 +71,7 @@ function SideMenu({ openModal, isModalOpen, closeModal }) { // Accept isModalOpe
       navigate(key); // Navigate to other pages
     }
   };
+
   return (
     <div className="Sidemenu">
       <Menu className="lable"
@@ -70,7 +82,6 @@ function SideMenu({ openModal, isModalOpen, closeModal }) { // Accept isModalOpe
           { label: "Bài đăng", key: "/Bài đăng" },
           { label: "Thông báo", key: "/Thông báo" },
           { label: "Tạo bài viết", key: "/Tạo bài viết" },
-          // { label: "Thể loại", key: "/Thể loại" },
         ]}
       />
     </div>
@@ -84,18 +95,15 @@ function Content() {
         <Route path="/Trang chủ" element={<Home />} />
         <Route path="/Tìm kiếm" element={<Timkiem />} />
         <Route path="/Bài đăng" element={<Baidang />} />
-        {/* Removed the duplicate Thongbao route */}
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Tạo bài viết" element={<Taobaiviet />} />
         <Route path="/Chỉnh sửa bài viết" element={<Chinhsua />} />
         <Route path="/Chỉnh sửa trang cá nhân" element={<Chinhsuatcn />} />
-        <Route path="/avt" element={<AvatarMenu />} />
-        {/* <Route path="/Đăng nhập" element={<Dangnhap />} />
-        <Route path="/Đăng ký" element={<Dangki />} /> */}
       </Routes>
     </div>
   );
 }
+
 function Loginlogup() {
   return (
     <div>
@@ -106,4 +114,5 @@ function Loginlogup() {
     </div>
   );
 }
+
 export default App;

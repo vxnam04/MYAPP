@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Dangnhap.css'; // Nhập file CSS
 import { useNavigate } from 'react-router-dom';
 import anhbanlamviec1 from "../../Assets/banlamviec.avif";
-
+import { Link } from 'react-router-dom';
 const Dangnhap = () => {
     const navigate = useNavigate(); // Tạo đối tượng điều hướng
 
@@ -41,7 +41,7 @@ const Dangnhap = () => {
                     <div className='formrightlogin'>
                         <p className='xinchaologin'>Xin Chào !</p>
                         <p className='taoblogchoriengminh'>Hãy tạo blog cho riêng mình.</p>
-                        <button type="submit" className='nutlogin2'>Đăng kí</button>
+                        <Link to="/Đăng ký"><button type="submit" className='nutlogin2'>Đăng kí</button></Link>
                     </div>
                 </form>
             </div>

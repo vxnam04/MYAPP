@@ -1,0 +1,142 @@
+/* Container chính cho form đăng ký */
+.dangki-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto; /* Thêm scroll nếu form quá dài */
+    z-index: 10;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
+}
+.dangki-container:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Đổ bóng mạnh hơn khi hover */
+}
+.dangki-container img {
+    width: 100%; /* Chiều rộng 100% của form */
+    max-width: 200px; /* Giới hạn chiều rộng tối đa */
+    height: auto; /* Để hình ảnh co theo tỉ lệ */
+    object-fit: cover;
+    padding: 20px 0;
+    margin: 0 auto 20px; /* Căn giữa và thêm khoảng cách bên dưới */
+}
+
+/* Form chứa các input */
+.dangki-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+/* Thiết kế chung cho các input */
+.dangki-input {
+    margin-bottom: 20px;
+    padding: 0 12px; /* Giữ padding ngang nhưng bỏ padding dọc */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+    width: 100%; /* Đảm bảo tất cả các input đều có cùng chiều rộng */
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước tổng thể */
+    height: 45px; /* Chiều cao đồng nhất cho tất cả các input */
+}
+
+/* Hiệu ứng khi focus vào input */
+.dangki-input:focus {
+    border-color: #d90429;
+    box-shadow: 0 0 8px rgba(217, 4, 41, 0.2); /* Tạo hiệu ứng bóng khi focus */
+    outline: none;
+}
+
+/* Nút submit với thiết kế nổi bật */
+.dangki-submit {
+    padding: 12px;
+    background-color: #d90429;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    height: 45px; /* Chiều cao của nút submit bằng với các input */
+}
+
+/* Hiệu ứng hover cho nút submit */
+.dangki-submit:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05); /* Tạo hiệu ứng phóng to nhẹ khi hover */
+}
+
+/* Responsive: Điều chỉnh trên màn hình nhỏ hơn */
+@media (max-width: 480px) {
+    .dangki-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .dangki-submit {
+        font-size: 14px;
+    }
+}
+.dangki-firstName{
+    width: 48%;
+}
+.dangki-lastName{
+    width: 48%;
+}
+.xoayngang{
+    display: flex;
+    justify-content: space-between;
+}
+.dangki-password::placeholder {
+    font-size: 0.8rem;
+    opacity: 0.9; /* Đảm bảo placeholder vẫn dễ nhìn */
+}
+.overlaylogin5 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+    pointer-events: auto;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease; 
+}
+
+.overlaylogin5.show5 {
+    display: block;
+    opacity: 1;
+}
+.overlaylogin5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: slide-up 0.5s ease ; /* Thời gian và hiệu ứng chuyển động */
+}
+
+@keyframes slide-up {
+    from {
+        transform: translate(130px,70px); /* Bắt đầu từ góc dưới bên phải */
+    }
+    to {
+        transform: translate(0, 0); /* Kết thúc ở vị trí toàn màn hình */
+    }
+}
