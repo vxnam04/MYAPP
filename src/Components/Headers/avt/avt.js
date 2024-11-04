@@ -19,9 +19,9 @@ const AvatarMenu = () => {
         setIsModalOpen(prev => !prev); // Bật/tắt trạng thái modal
     };
 
-    const handleSubmit1 = () => {
-        toggleModal(); // Đóng modal khi nhấn nút đóng
-    };
+    // const handleSubmit1 = () => {
+    //     toggleModal(); // Đóng modal khi nhấn nút đóng
+    // };
 
     const handleOverlayClick7 = (e) => {
         toggleModal(); // Đóng modal khi nhấp ra ngoài
@@ -32,7 +32,7 @@ const AvatarMenu = () => {
             {
                 isModalOpen && (
                     <div className='boxavt'>
-                        <button onClick={handleSubmit1} className='nutdong4'>x</button>
+                        {/* <button onClick={handleSubmit1} className='nutdong4'>x</button> */}
                         <p className='xemtrangcanhan chungavt' onClick={() => handleMenuClick('/Profile')}>Xem trang cá nhân</p>
                         <p className='dangnhapavt chungavt' onClick={() => handleMenuClick('/Đăng nhập')}>Đăng nhập</p>
                         <p className='dangkiavt chungavt' onClick={() => handleMenuClick('/Đăng ký')}>Đăng ký</p>

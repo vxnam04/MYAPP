@@ -26,4 +26,6 @@
      /* Màu nền khi mục được active (tuỳ chọn) */
      border: none;
   }
-
+i{
+  margin-right: 15px;
+}
