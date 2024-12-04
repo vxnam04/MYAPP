@@ -21,7 +21,6 @@ import Comment from './Components/Comments/Comment';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false); // Avatar menu state
-  const [isAvatarcomment, setIscomment] = useState(false);
   const openModal = () => {
     setIsModalOpen(true); // Open modal
   };
@@ -32,9 +31,6 @@ function App() {
 
   const toggleAvatarMenu = () => {
     setIsAvatarMenuOpen(!isAvatarMenuOpen); // Toggle avatar menu
-  };
-  const togglecomment = () => {
-    setIscomment(!isAvatarcomment);
   };
   return (
     <>
@@ -48,7 +44,6 @@ function App() {
             closeModal={closeModal}
           />
           <Content />
-          {isAvatarcomment && <Comment />}
           {isAvatarMenuOpen && <AvatarMenu />} {/* Render AvatarMenu conditionally */}
         </div>
         <Footer />
@@ -59,7 +54,7 @@ function App() {
 }
 
 function Footer() {
-  return <div>Footer</div>;
+  return <div></div>;
 }
 
 function SideMenu({ openModal, isModalOpen, closeModal }) {
